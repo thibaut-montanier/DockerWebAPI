@@ -13,18 +13,23 @@ Pour créer un environnement keycloak, le plus simple est d'utiliser un docker c
 ```docker compose
 version: '3'
 services:
-  keycloak:
+   dc-keycloak:
     image: quay.io/keycloak/keycloak:22.0.5
     environment:
       KEYCLOAK_LOG_LEVEL: DEBUG
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: myadminpwd
       KC_PROXY: edge
+      KC_PROXY_MODE: edge
+      KC_HTTP_ENABLED: true
       KC_HOSTNAME_STRICT: false
+      KC_HOSTNAME_PATH: /auth
+      KC_HOSTNAME_URL: http://localhost:100/auth
+      KC_HOSTNAME_ADMIN_URL: http://localhost:100/auth
     command:
       - start-dev
-    ports:
-    - 8080:8080
+    volumes:
+      - ./volumes/keyckloak:/opt/keycloak/data/h2
 ```
 ## Configuration d'un realm
 Un realm correspond à un fournisseur d'identité. Keycloak est capable d'héberger de nombreux Idp au travers de nombreux realms. 
