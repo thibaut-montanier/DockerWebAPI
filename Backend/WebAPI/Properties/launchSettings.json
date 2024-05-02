@@ -5,8 +5,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "APP__ApiUrls__Service2": "tutu"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5284"
@@ -17,7 +16,7 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "App__ApiUrls__Service2": "tutu"
+        "App__ApiUrls__UrlWebApi2": "https://localhost:7284/internal-api/"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7004;http://localhost:5284"

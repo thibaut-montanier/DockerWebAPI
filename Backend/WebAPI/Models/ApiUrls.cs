@@ -3,6 +3,7 @@
     public class ApiUrls
     {
 
-        public string Service2 { get; set; }
+        public string UrlWebApi2 { get; set; }
+        public string UrlService2 { get; set; }
     }
 }

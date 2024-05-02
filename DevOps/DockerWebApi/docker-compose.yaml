@@ -11,7 +11,6 @@ services:
     - ./nginx/logs/:/var/log/nginx
 
   webapi:
-    image: webapi
     build:
       dockerfile: ./WebAPI/Dockerfile
       context: ../../Backend
@@ -19,7 +18,16 @@ services:
         BUILD_CONFIGURATION: Debug
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - App__ApiUrls__UrlWebApi2=http://webapi2:8080/internal-api/
 
+  webapi2:
+    build:
+      dockerfile: ./WebAPI2/Dockerfile
+      context: ../../Backend
+      args:
+        BUILD_CONFIGURATION: Debug
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
 
   front:
     build:
