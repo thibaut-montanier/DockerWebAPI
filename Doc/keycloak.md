@@ -3,7 +3,7 @@
 Keycloak est un Idp, un Identity Provider.
 
 La meilleure manière d el'utiliser aujourd'hui est en utilisant le protocol OAuth2.
-=> Mettre un lien vers la vidéo de Tanguy.
+=> https://www.youtube.com/watch?v=YdShQveywpo 
 
 
 ## Montage d'un keycloak
