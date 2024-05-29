@@ -64,7 +64,7 @@ Il s'agit de 2 champs très important dans la sécurité => quels sont les sites
 => Pour plus de simplicité, nous allons simplement mettre '*', mais ce n'est pas une bonne idée en prod.
 
 
-=> Client socpe, ajouter l'audience à partir Add Mapper / By config
+=> Client scope, ajouter l'audience à partir Add Mapper / By config dans le scope "dedicated"
 
 
 ## Laison de dotnet avec ce realm
