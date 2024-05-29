@@ -161,6 +161,21 @@ export class AppModule { }
 
 ```
 
+Dans le fichier app.component.ts
+``` javascript
+ngOnInit() {
+    this.oidcSecurityService.checkAuth().subscribe(({ isAuthenticated, userData}) => {
+      console.log('checkauth')
+      console.log(isAuthenticated ,userData);
+    });
+    this.oidcSecurityService.getAccessToken().subscribe({
+      next:(at)=> this.token = at,
+      error:(err)=> console.log(err),
+      complete: ()=>console.log('complete')
+
+    });
+  }
+```
 vous devez ensuite utiliser : 
 
 ```javascript
